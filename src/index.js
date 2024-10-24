@@ -8,8 +8,6 @@ import { AuthProvider } from "./context/auth";
 import { SearchProvider } from "./context/search";
 import { CartProvider } from "./context/cart";
 import 'antd/dist/reset.css'
-import { Auth0Provider } from '@auth0/auth0-react';
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <AuthProvider>

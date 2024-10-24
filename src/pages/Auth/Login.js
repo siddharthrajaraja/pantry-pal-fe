@@ -8,20 +8,8 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
+
 const Login = () => {
-
-
-
-// const loginwithgoogle =()=>{
-//   window.open("http://localhost:8000/auth/google/callback","_self")
-
-// }
-
-
-
-
-
-
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +22,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/v1/auth/login", {
+
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/login`, {
         email,
         password,
       });

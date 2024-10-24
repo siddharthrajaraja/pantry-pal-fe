@@ -35,7 +35,7 @@ const Orders = () => {
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("/api/v1/auth/orders");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}` + "/api/v1/auth/orders");
       setOrders(data);
     } catch (error) {
       console.log(error);
